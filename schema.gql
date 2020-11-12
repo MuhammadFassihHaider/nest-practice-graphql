@@ -1,0 +1,57 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ProductsDto {
+  id: String!
+  title: String!
+  description: String!
+  price: Int!
+}
+
+type UserDto {
+  id: String!
+  username: String!
+  password: String!
+  orderCount: Float!
+}
+
+type StoreDto {
+  id: String!
+  userID: String!
+  productID: String!
+  count: Float!
+  limit: Float!
+}
+
+type Query {
+  showAllProducts: [ProductsDto!]!
+  hello: String!
+  getUsers: [UserDto!]!
+  showAllStore: [StoreDto!]!
+}
+
+type Mutation {
+  createProduct(input: ProductsInput!): ProductsDto!
+  createUser(input: UserInput!): UserDto!
+  storeEntery(input: StoreInput!): StoreDto!
+}
+
+input ProductsInput {
+  title: String!
+  description: String!
+  price: Int!
+}
+
+input UserInput {
+  username: String!
+  password: String!
+  orderCount: Float!
+}
+
+input StoreInput {
+  userID: String!
+  productID: String!
+  count: Float!
+  limit: Float!
+}

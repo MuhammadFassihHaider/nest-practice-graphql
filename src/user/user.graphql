@@ -1,0 +1,33 @@
+scalar Upload
+
+type Users {
+    id: String
+    username: String
+    password: String
+    orderCount:Int 
+}
+
+
+input UsersInput {
+    username: String
+    password: String
+    orderCount:Int 
+}
+
+input File {
+    filename: String!
+    mimetype: String!
+    encoding: String!
+  }
+
+
+
+type Query{
+  showAllUsers: [Users]
+}
+
+type Mutation{
+    createUser(user: UsersInput): Users,
+    profileUpload(file: Upload!): Boolean
+}
+

@@ -1,0 +1,24 @@
+type Products {
+  id: String!
+  title: String!
+  description: String!
+  price:Int!
+}
+
+input ProductsInput {
+  title: String
+  description: String
+  price:Int
+}
+
+type Query{
+  showAllProducts: [Products]
+}
+
+type Mutation{
+  createProduct(product: ProductsInput): Products
+}
+
+type Subscription {
+  productAdded: String
+}

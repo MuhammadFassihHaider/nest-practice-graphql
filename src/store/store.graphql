@@ -1,0 +1,24 @@
+type Store {
+     id: String
+     userID: String
+     user: Users
+     productID: String
+     count: Int
+     limit: Int
+}
+
+input StoreInput {
+     userID: String
+     productID: String
+     count: Int
+     limit: Int
+}
+
+
+type Query{
+  showAllStore: [Store]
+}
+
+type Mutation{
+  storeEntery(store: StoreInput): Store
+}
