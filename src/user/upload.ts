@@ -13,5 +13,4 @@ export class Upload {
   serialize(value: any) {
     return GraphQLUpload.serialize(value);
   }
-
 }
